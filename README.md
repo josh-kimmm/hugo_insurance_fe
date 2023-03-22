@@ -1,46 +1,10 @@
-# Getting Started with Create React App
+# Frontend Repo for Interview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This code can still be cleaned up by a lot but I think it's an okay place to start building things. Couple things to note here.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. In a real app, I would further break down these different steps into it's own Folder, that way we can scope the components needed for that specific step.
+  a) The component that has the folder name would ultimately be responsible for the Layout of things, however I did not demonstrate this here as there's not much that goes on in a single component. 
+2. All constants live in one File. Ideally, we would break these up into it's own files and break them up by which onboarding Step it occurs from. 
+3. The use of '_' character behind every action might not be the best naming convention for real world application but it was an easy way to create consistency in my codebase. 
+4. Ideally would've liked to create a wrapper for axios, that way we can define middleware, set up options, and define retry strategies in place but it definitely wasn't needed for this project.
+5. If the application ever grows bigger, I'd eventually break the redux store up into different slices as well but for this purpose, only having one centralized store did everything for me. 
